@@ -28,8 +28,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./front-end-react
-          file: ./Dockerfile
+          context: .
+          file: ./front-end-react/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/frontend:0.2.0
 
@@ -55,8 +55,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./front-end-react
-          file: ./Dockerfile
+          context: .
+          file: ./order-service/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/order-service:0.2.0
   
@@ -82,7 +82,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./front-end-react
-          file: ./Dockerfile
+          context: .
+          file: ./user-service/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/user-service:0.2.0
