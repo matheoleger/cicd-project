@@ -18,7 +18,7 @@ const App = () => {
 
   const fetchOrderData = async () => {
     try {
-      const response = await fetch('http://localhost:3002/order');
+      const response = await fetch('http://order-service-service:3002/order');
       const data = await response.json();
       setOrderData(data.message);
     } catch (error) {
