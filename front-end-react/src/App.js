@@ -8,7 +8,7 @@ const App = () => {
 
   const fetchUserData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/user');
+      const response = await fetch('http://192.168.85.2:31001/user');
       const data = await response.json();
       setUserData(data);
     } catch (error) {
@@ -18,7 +18,7 @@ const App = () => {
 
   const fetchOrderData = async () => {
     try {
-      const response = await fetch('http://localhost:3002/order');
+      const response = await fetch('http://192.168.85.2:31002/order');
       const data = await response.json();
       setOrderData(data.message);
     } catch (error) {
@@ -34,7 +34,7 @@ const App = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/user', {
+      const response = await fetch('http://192.168.85.2:31001/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
