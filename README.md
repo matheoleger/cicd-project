@@ -3,6 +3,11 @@
 ## Contexte
 Vous travaillez sur le déploiement d'une application composée de microservices dans un environnement Kubernetes. L'application est constituée de quatre services : le frontend React, le service de gestion des ordres, le service utilisateur interagissant avec une base de données MongoDB, et enfin, une instance MongoDB.
 
+## Le projet
+
+- Les microservices : [@matheoleger/cicd-project](https://github.com/matheoleger/cicd-project)
+- Les fichiers K8S pour le déploiement : [@matheoleger/microapp-deploy](https://github.com/matheoleger/microapp-deploy)
+
 ## Indication sur le projet
 
 ### Comment lancer le projet
@@ -143,6 +148,9 @@ J'ai fait fonctionné ArgoCD en local, il faut donc sûrement recréé la config
 Maintenant vous devriez pouvoir voir quelque chose qui ressemble à ça (en cliquant sur l'affichage `network`):
 
 ![application-details-network-ArgoCD.png](./readme/img/application-details-network-ArgoCD.png)
+
+
+Maintenant, si jamais il y a une modification dans le code et qu'on créé une nouvelle version du projet, cela déclenchera automatiquement une synchronisation sur ArgoCD.
 
 ### À noter
 
