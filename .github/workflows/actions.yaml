@@ -76,6 +76,7 @@ jobs:
             ${{ secrets.DOCKER_USERNAME }}/user-service:latest
 
   trigger-cd:
+    name: Triggered the Github Action from microapp-deploy to deploy the newest version.
     runs-on: ubuntu-latest
     needs: [frontend-push, order-service-push, user-service-push]
     steps:
