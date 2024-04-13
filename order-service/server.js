@@ -7,7 +7,7 @@ const port = 3002;
 app.use(cors());
 
 app.get('/order', (req, res) => {
-  res.json({ message: 'Test depuis le service Order' });
+  res.json({ message: 'Hello depuis le service Order' });
 });
 
 app.listen(port, () => {
